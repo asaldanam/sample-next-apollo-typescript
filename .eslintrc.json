@@ -6,7 +6,7 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "react-app",
+    "plugin:react-hooks/recommended",
     "airbnb",
     "plugin:prettier/recommended"
   ],
@@ -19,7 +19,6 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react",
     "@typescript-eslint",
     "prettier"
   ],
@@ -27,16 +26,20 @@
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx", ".tsx", ".ts"] }],
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "warn",
+    "react/jsx-props-no-spreading": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": ["warn", { "allow": ["tron"] }],
     "no-param-reassign": "off",
     "no-underscore-dangle": "off",
     "prettier/prettier": "warn",
     "global-require": "off",
+    "react/react-in-jsx-scope": "off",
     "camelcase": "off",
     "import/no-cycle": [1, { "maxDepth": 1 }],
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": ["warn", { "devDependencies": true }],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
     "jsx-a11y/label-has-for": "off",
     "jsx-a11y/label-has-associated-control": "off"
   }

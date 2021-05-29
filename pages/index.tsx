@@ -1,9 +1,8 @@
-import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useAnilistQuery } from 'services/apollo/anilist/queries';
 
-export default function Home({ countries }) {
-  const { data } = useAnilistQuery('page', {variables: {customVar: 'asdf'}});
+export default function Home() {
+  const { data } = useAnilistQuery('page', { variables: { customVar: 'asdf' } });
   return (
     <div>
       <Head>
@@ -13,21 +12,20 @@ export default function Home({ countries }) {
       </Head>
       <main>
         <a href="/animes">Animes</a>
+        <div>{JSON.stringify(data)}</div>
       </main>
     </div>
-  )
+  );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  // const { data } = await client.query({
-  //   query: GET_COUNTRIES,
-  // });
-  
-  return {
-    props: {
-      // countries: data.countries,
-      countries: null
-    },
-  };
-}
+// export const getServerSideProps: GetServerSideProps = async () =>
+//   const { data } = await client.query({
+//     query: GET_COUNTRIES,
+//   });
 
+//   ({
+//     props: {
+//       countries: data.countries,
+//       countries: null,
+//     },
+//   });

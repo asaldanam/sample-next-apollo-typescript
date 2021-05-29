@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client"
+import { gql } from '@apollo/client';
 
 export const ANILIST_QUERY = {
   page: gql`
     query ($id: Int, $page: Int, $perPage: Int, $search: String) {
-      Page (page: $page, perPage: $perPage) {
+      Page(page: $page, perPage: $perPage) {
         pageInfo {
           total
           currentPage
@@ -11,7 +11,7 @@ export const ANILIST_QUERY = {
           hasNextPage
           perPage
         }
-        media (id: $id, search: $search) {
+        media(id: $id, search: $search) {
           id
           title {
             romaji
@@ -20,4 +20,4 @@ export const ANILIST_QUERY = {
       }
     }
   `,
-}
+};

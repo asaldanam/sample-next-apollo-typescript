@@ -5,9 +5,7 @@
 export type PromisedValueOf<T> = T extends PromiseLike<infer U> ? U : T;
 
 /** Devuelve el tipo de la respuesta de un método asíncrono */
-export type ResponseOf<F extends (...args: any) => any> = PromisedValueOf<
-  ReturnType<F>
->;
+export type ResponseOf<F extends (...args: any) => any> = PromisedValueOf<ReturnType<F>>;
 
 /** Devuelve los parámetros de un método */
 export type ParamsOf<F extends (...args: any) => any> = Parameters<F>;

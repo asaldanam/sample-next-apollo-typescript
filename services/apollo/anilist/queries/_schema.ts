@@ -4,7 +4,7 @@ export interface AnilistSchema {
       test: string;
     };
     vars: {
-      customVar: string
+      customVar: string;
     };
   };
 }
