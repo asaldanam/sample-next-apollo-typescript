@@ -1,12 +1,11 @@
-import { ApolloProvider } from '@apollo/client';
-import client from '../config/apollo-client';
+import ApolloMulticlientsProvider from 'services/apollo';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: any) {
   return (
-    <ApolloProvider client={client}>
+    <ApolloMulticlientsProvider>
       <Component {...pageProps} />
-    </ApolloProvider>
+    </ApolloMulticlientsProvider>
   );
 }
 
