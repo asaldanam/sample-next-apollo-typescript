@@ -6,7 +6,18 @@ export default function Home() {
     <div>
       <HeadTag />
       <main>
-        <Link href="/animes">Animes</Link>
+        {/* <Link href="/animes">Animes</Link> */}
+        <ul>
+          <li>
+            <Link href="/static">Static Page Example</Link>
+          </li>
+          <li>
+            <Link href="/incremental">Incremental Page Example</Link>
+          </li>
+          <li>
+            <Link href="/server">Server Page Example</Link>
+          </li>
+        </ul>
       </main>
     </div>
   );
